@@ -16,7 +16,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 
 	4.1. Add the following imports in the class which contains your Tizen logic.
 
-	```java
+	```
     			import java.io.IOException;
 
     			import android.content.Intent;
