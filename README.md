@@ -38,7 +38,7 @@ Approach 1:
     // do your work here
     }
 ```
-  b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
+    b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
 
 ```java    
      @Override
@@ -93,7 +93,7 @@ Approach 1:
         }
 ```
 
-  c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related
+   c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related
       response back to tizen.
       
 ```java
