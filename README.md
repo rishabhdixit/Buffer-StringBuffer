@@ -37,6 +37,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 	4.2. Use Strap Metrics SDK in your Tizen Code:
     	
     		a. Extend StrapMetrics Class in your Main Service Class.
+			
 			```java   
    			public class OceanSurveyFullyManagedService extends StrapMetrics {
     				// do your work here
