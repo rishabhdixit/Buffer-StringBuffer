@@ -16,23 +16,23 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 
 	4.1. Add the following imports in the class which contains your Tizen logic.
 
-	```java
-    	import java.io.IOException;
+			```java
+    			import java.io.IOException;
 
-    	import android.content.Intent;
-    	import android.os.Binder;
-    	import android.os.IBinder;
-    	import android.util.Log;
-    	import com.samsung.android.sdk.SsdkUnsupportedException;
-    	import com.samsung.android.sdk.accessory.SA;
-    	import com.samsung.android.sdk.accessory.SAPeerAgent;
-    	import com.samsung.android.sdk.accessory.SASocket;
-    	import com.straphq.sdk.tizen.StrapMetrics;
-    	import com.straphq.sdk.tizen.dto.StrapMessageDTO;
-    	import com.straphq.sdk.tizen.exception.StrapSDKException;
-    	import com.straphq.sdk.tizen.impl.TizenConnectionImpl;
-    	import com.straphq.sdk.tizen.interfaces.StrapTizenSDKMessageListener;
-	```
+    			import android.content.Intent;
+    			import android.os.Binder;
+    			import android.os.IBinder;
+    			import android.util.Log;
+    			import com.samsung.android.sdk.SsdkUnsupportedException;
+    			import com.samsung.android.sdk.accessory.SA;
+    			import com.samsung.android.sdk.accessory.SAPeerAgent;
+    			import com.samsung.android.sdk.accessory.SASocket;
+    			import com.straphq.sdk.tizen.StrapMetrics;
+    			import com.straphq.sdk.tizen.dto.StrapMessageDTO;
+    			import com.straphq.sdk.tizen.exception.StrapSDKException;
+    			import com.straphq.sdk.tizen.impl.TizenConnectionImpl;
+    			import com.straphq.sdk.tizen.interfaces.StrapTizenSDKMessageListener;
+			```
 	
 	4.2. Use Strap Metrics SDK in your Tizen Code:
     	
@@ -93,30 +93,29 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 
    		c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related response back to tizen.
       
-		```java
-       		@Override
-           	protected void onServiceConnectionResponse(SASocket thisConnection, int result) {
-                	if (result == CONNECTION_SUCCESS) {
-                      		if (thisConnection != null) {
-                          		mConnection = (TizenConnectionImpl.TizenConnectionListener) thisConnection;
-                      		} else {
-                          		Log.e(TAG, "SASocket object is null");
-                      		}
-                  	} else if (result == CONNECTION_ALREADY_EXIST) {
+			```java
+       			@Override
+           		protected void onServiceConnectionResponse(SASocket thisConnection, int result) {
+                		if (result == CONNECTION_SUCCESS) {
+                      			if (thisConnection != null) {
+                          			mConnection = (TizenConnectionImpl.TizenConnectionListener) thisConnection;
+                      			} else {
+                          			Log.e(TAG, "SASocket object is null");
+                      			}
+                  		} else if (result == CONNECTION_ALREADY_EXIST) {
                       		Log.e(TAG, "onServiceConnectionResponse, CONNECTION_ALREADY_EXIST");
-                  	} else {
-                      		Log.e(TAG, "onServiceConnectionResponse result error =" + result);
-                  	}
-
-           	}
-		```
+                  		} else {
+                      			Log.e(TAG, "onServiceConnectionResponse result error =" + result);
+                  		}
+	           	}
+			```
       Approach 2:
 
 	4.1. Add the following imports in the class which contains your Tizen logic.
-		```java
-    		import com.straphq.sdk.tizen.StrapMetrics;
-    		import org.json.JSONException;
-		```
+			```java
+    			import com.straphq.sdk.tizen.StrapMetrics;
+    			import org.json.JSONException;
+			```
     
 	4.2. Strap Metrics methods that developer can include in his/her logic for this approach are:
     		a. canHandleMessage: returns a boolean value true/false depending on the type of data passed to it as argument i.e if the data is strap related then it will return true otherwise false.
@@ -124,20 +123,20 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     		b. logReceivedData: sends strap data to strap metrics.
 
    	Use strap metrics methods inside onReceive() method of your Tizen Logic java file as follows:
-		```java
-    		@Override
-    		public void onReceive(int channelId, byte[] data) {
-    			if(StrapMetrics.canHandleMessage(data)){
-    				StrapMessageDTO strapMessageDTO;
-    				try {
-    					strapMessageDTO = new StrapMessageDTO(new String(data));
-    					StrapMetrics.logReceivedData(strapMessageDTO);
-	    			} catch (JSONException e) {
-	    				// TODO Auto-generated catch block
-    					e.printStackTrace();
+			```java
+    			@Override
+    			public void onReceive(int channelId, byte[] data) {
+    				if(StrapMetrics.canHandleMessage(data)){
+    					StrapMessageDTO strapMessageDTO;
+    					try {
+    						strapMessageDTO = new StrapMessageDTO(new String(data));
+    						StrapMetrics.logReceivedData(strapMessageDTO);
+	    				} catch (JSONException e) {
+	    					// TODO Auto-generated catch block
+    						e.printStackTrace();
+    					}
+    				} else {
+    					//Do Something with non strap related data
     				}
-    			} else {
-    				//Do Something with non strap related data
     			}
-    		}
-    		```
+    			```
