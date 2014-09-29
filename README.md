@@ -38,14 +38,14 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     	
     		a. Extend StrapMetrics Class in your Main Service Class.
 			
-			```java   
+		```   
    			public class OceanSurveyFullyManagedService extends StrapMetrics {
     				// do your work here
     			}
-			```
+		```
     		b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
 
-			```java    
+		```    
      			@Override
         		public void onCreate() {
             			// TODO Auto-generated method stub
@@ -89,11 +89,11 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
                     			}
                 		});
         		}
-			```
+		```
 
    		c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related response back to tizen.
       
-			```java
+		```
        			@Override
            		protected void onServiceConnectionResponse(SASocket thisConnection, int result) {
                 		if (result == CONNECTION_SUCCESS) {
@@ -108,14 +108,14 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
                       			Log.e(TAG, "onServiceConnectionResponse result error =" + result);
                   		}
 	           	}
-			```
+		```
       Approach 2:
 
 	4.1. Add the following imports in the class which contains your Tizen logic.
-			```java
+		```
     			import com.straphq.sdk.tizen.StrapMetrics;
     			import org.json.JSONException;
-			```
+		```
     
 	4.2. Strap Metrics methods that developer can include in his/her logic for this approach are:
     		a. canHandleMessage: returns a boolean value true/false depending on the type of data passed to it as argument i.e if the data is strap related then it will return true otherwise false.
@@ -123,7 +123,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     		b. logReceivedData: sends strap data to strap metrics.
 
    	Use strap metrics methods inside onReceive() method of your Tizen Logic java file as follows:
-			```java
+		```
     			@Override
     			public void onReceive(int channelId, byte[] data) {
     				if(StrapMetrics.canHandleMessage(data)){
@@ -139,4 +139,4 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     					//Do Something with non strap related data
     				}
     			}
-    			```
+    		```
