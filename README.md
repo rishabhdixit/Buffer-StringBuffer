@@ -4,7 +4,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 2. Include the library strap-tizen-SDK-0.2.6-RC1-bundle.jar in your Eclipse project.
 3. Your AppManifest.xml should declare the following permissions:
 
-		<uses-permission android:name="android.permission.INTERNET"/>
+			<uses-permission android:name="android.permission.INTERNET"/>
 
 4. There are 2 approaches to use Strap Metrics in your Tizen Code:
 
