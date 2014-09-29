@@ -11,8 +11,8 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
       a. Approach 1 - In this approach Strap Metrics handle most of the provider side services. The developer can override methods accordingly.
       
       b. Approach 2 - In this approach developer has to write most of the provider side services. The developer can directly use Strap Metrics methods.
-
-    Approach 1:
+        
+      Approach 1:
 
 	4.1. Add the following imports in the class which contains your Tizen logic.
 
@@ -108,20 +108,20 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 
            	}
 		```
+      Approach 2:
 
-Approach 2:
-
-4. Add the following imports in the class which contains your Tizen logic.
+	4.1. Add the following imports in the class which contains your Tizen logic.
 		```java
     		import com.straphq.sdk.tizen.StrapMetrics;
     		import org.json.JSONException;
 		```
     
-5. Strap Metrics methods that developer can include in his/her logic for this approach are:
-    a. canHandleMessage: returns a boolean value true/false depending on the type of data passed to it as argument i.e if the data is strap related then it will return true otherwise false.
-    b. logReceivedData: sends strap data to strap metrics.
+	4.2. Strap Metrics methods that developer can include in his/her logic for this approach are:
+    		a. canHandleMessage: returns a boolean value true/false depending on the type of data passed to it as argument i.e if the data is strap related then it will return true otherwise false.
+    		
+    		b. logReceivedData: sends strap data to strap metrics.
 
-   Use strap metrics methods inside onReceive() method of your Tizen Logic java file as follows:
+   	Use strap metrics methods inside onReceive() method of your Tizen Logic java file as follows:
 		```java
     		@Override
     		public void onReceive(int channelId, byte[] data) {
