@@ -38,7 +38,11 @@ Approach 1:
     // do your work here
     }
 ```
+
+
     b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
+    
+    
 ```java    
      @Override
         public void onCreate() {
