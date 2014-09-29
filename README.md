@@ -8,11 +8,11 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 
 4. There are 2 approaches to use Strap Metrics in your Tizen Code:
 
-      a. Approach 1 - In this approach Strap Metrics handle most of the provider side services. The developer can override methods accordingly.
+        a. Approach 1 - In this approach Strap Metrics handle most of the provider side services. The developer can override methods accordingly.
       
-      b. Approach 2 - In this approach developer has to write most of the provider side services. The developer can directly use Strap Metrics methods.
+        b. Approach 2 - In this approach developer has to write most of the provider side services. The developer can directly use Strap Metrics methods.
         
-      Approach 1:
+        Approach 1:
 
    	4.1. Add the following imports in the class which contains your Tizen logic.
 
@@ -36,7 +36,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 	
 	4.2. Use Strap Metrics SDK in your Tizen Code:
     	 
-    		a. Extend StrapMetrics Class in your Main Service Class.
+    	 a. Extend StrapMetrics Class in your Main Service Class.
 			
 	```   
    			public class OceanSurveyFullyManagedService extends StrapMetrics {
@@ -44,7 +44,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     			}
 	```
 	
-    		b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
+    	 b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
 
 	```    
      			@Override
@@ -92,7 +92,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
         		}
 	```
 
-   		c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related response back to tizen.
+   	 c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related response back to tizen.
       
 	```
        			@Override
