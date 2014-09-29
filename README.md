@@ -72,7 +72,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 
                     			public void onMessage(byte[] data) {
                     				try {
-                    					mConnection.send(CHANNEL_ID, "Send your non strap response");
+                    					mConnection.send(CHANNEL_ID, "Send your non strap 									response");
                     				} catch (IOException e) {
                     					// TODO Auto-generated catch block
                     					e.printStackTrace();
@@ -85,7 +85,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
                     			}
                 		});
         		}
-```
+			```
 
    c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related
       response back to tizen.
