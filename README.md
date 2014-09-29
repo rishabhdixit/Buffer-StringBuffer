@@ -16,7 +16,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 
 	4.1. Add the following imports in the class which contains your Tizen logic.
 
-			```java
+		```java
     			import java.io.IOException;
 
     			import android.content.Intent;
@@ -32,7 +32,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     			import com.straphq.sdk.tizen.exception.StrapSDKException;
     			import com.straphq.sdk.tizen.impl.TizenConnectionImpl;
     			import com.straphq.sdk.tizen.interfaces.StrapTizenSDKMessageListener;
-			```
+		```
 	
 	4.2. Use Strap Metrics SDK in your Tizen Code:
     	
