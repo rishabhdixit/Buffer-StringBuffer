@@ -141,4 +141,4 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     					//Do Something with non strap related data
     				}
     			}
-    	```
+    	
