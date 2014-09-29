@@ -38,14 +38,14 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     	
     		a. Extend StrapMetrics Class in your Main Service Class.
 			
-		```   
+	```   
    			public class OceanSurveyFullyManagedService extends StrapMetrics {
     				// do your work here
     			}
-		```
+	```
     		b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
 
-		```    
+	```    
      			@Override
         		public void onCreate() {
             			// TODO Auto-generated method stub
@@ -89,7 +89,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
                     			}
                 		});
         		}
-		```
+	```
 
    		c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related response back to tizen.
       
