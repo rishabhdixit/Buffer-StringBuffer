@@ -91,6 +91,7 @@ Approach 1:
                 });
         }
 ```
+
     c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related
       response back to tizen.
       
