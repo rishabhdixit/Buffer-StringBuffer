@@ -14,7 +14,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
         
       Approach 1:
 
-  	4.1. Add the following imports in the class which contains your Tizen logic.
+   	4.1. Add the following imports in the class which contains your Tizen logic.
 
 	```
     			import java.io.IOException;
@@ -36,7 +36,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
 	
 	4.2. Use Strap Metrics SDK in your Tizen Code:
     	 
-    	 a. Extend StrapMetrics Class in your Main Service Class.
+    		a. Extend StrapMetrics Class in your Main Service Class.
 			
 	```   
    			public class OceanSurveyFullyManagedService extends StrapMetrics {
@@ -44,7 +44,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     			}
 	```
 	
-    	 b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
+    		b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
 
 	```    
      			@Override
@@ -92,7 +92,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
         		}
 	```
 
-   	 c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related response back to tizen.
+   		c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related response back to tizen.
       
 	```
        			@Override
@@ -120,9 +120,9 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     
 	4.2. Strap Metrics methods that developer can include in his/her logic for this approach are:
     	 
-    	 a. canHandleMessage: returns a boolean value true/false depending on the type of data passed to it as argument i.e if the data is strap related then it will return true otherwise false.
+    	 	a. canHandleMessage: returns a boolean value true/false depending on the type of data passed to it as argument i.e if the data is strap related then it will return true otherwise false.
     		
-    	 b. logReceivedData: sends strap data to strap metrics.
+    	 	b. logReceivedData: sends strap data to strap metrics.
 
    	Use strap metrics methods inside onReceive() method of your Tizen Logic java file as follows:
 	```
