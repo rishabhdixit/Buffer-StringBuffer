@@ -33,7 +33,9 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     	import com.straphq.sdk.tizen.impl.TizenConnectionImpl;
     	import com.straphq.sdk.tizen.interfaces.StrapTizenSDKMessageListener;
 	```
+	
 	4.2. Use Strap Metrics SDK in your Tizen Code:
+    	
     		a. Extend StrapMetrics Class in your Main Service Class.
 			```java   
    			public class OceanSurveyFullyManagedService extends StrapMetrics {
@@ -88,8 +90,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
         		}
 			```
 
-   c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related
-      response back to tizen.
+   		c. Initialize Socket Connection in onServiceConnectionResponse method, which is used to send non strap related response back to tizen.
       
 		```java
        		@Override
