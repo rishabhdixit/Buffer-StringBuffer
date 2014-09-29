@@ -15,6 +15,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     Approach 1:
 
 	4.1. Add the following imports in the class which contains your Tizen logic.
+
 	```java
     	import java.io.IOException;
 
@@ -36,7 +37,7 @@ Getting Started with the Strap Metrics Tizen SDK for Android Companion Apps
     		a. Extend StrapMetrics Class in your Main Service Class.
 			```java   
    			public class OceanSurveyFullyManagedService extends StrapMetrics {
-    			// do your work here
+    				// do your work here
     			}
 			```
     		b. Override onCreate Method of StrapMetrics for Socket Connection and bind addMessageListener.
